@@ -6,7 +6,7 @@ export const portfolioProfile: PortfolioProfile = {
   location: 'Auckland, New Zealand',
   email: 'cassidybrookland2@gmail.com',
   linkedin: 'https://www.linkedin.com/in/cassidy-brookland-596bb1210/',
-  resumeUrl: `${import.meta.env.BASE_URL}resume.html`,
+  resumeUrl: 'https://cassidybrook.github.io/Product-Portfolio-Cassidy-Brookland/resume.html',
   intro:
     'I am a Product Manager who builds practical IoT products for energy and smart-building use cases. My focus is turning complex technical systems into clear product decisions, measurable outcomes, and stakeholder-ready experiences that teams can deliver with confidence.',
   productFocus: [
