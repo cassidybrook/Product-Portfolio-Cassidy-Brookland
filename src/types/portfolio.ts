@@ -11,12 +11,6 @@ export interface ExperienceEntry {
   highlights: string[];
 }
 
-export interface ImpactMetric {
-  value: string;
-  label: string;
-  context: string;
-}
-
 export interface EducationEntry {
   id: string;
   qualification: string;
@@ -30,7 +24,7 @@ export interface FeaturedProject {
   title: string;
   description: string;
   tags: string[];
-  demoAnchor: 'dashboard' | 'stakeholders' | 'artifacts';
+  demoAnchor: 'landing' | 'silosense' | 'gridpulse';
 }
 
 export interface PortfolioProfile {
@@ -41,16 +35,19 @@ export interface PortfolioProfile {
   linkedin: string;
   resumeUrl: string;
   intro: string;
-  productFocus: string[];
   summary: string;
   site: {
     name: string;
     tagline: string;
     description: string;
   };
-  impactMetrics: ImpactMetric[];
-  featuredProjects: FeaturedProject[];
+  featuredProject: FeaturedProject;
+  howIThink: {
+    title: string;
+    principles: { heading: string; body: string }[];
+  };
   skillGroups: SkillGroup[];
+  foldedSkills: string[];
   education: EducationEntry[];
   experience: ExperienceEntry[];
   aiSummary: {
@@ -58,5 +55,4 @@ export interface PortfolioProfile {
     bullets: string[];
     toolchain: string;
   };
-  builtWith: string;
 }

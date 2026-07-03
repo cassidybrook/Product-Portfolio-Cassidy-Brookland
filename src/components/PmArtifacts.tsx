@@ -16,8 +16,8 @@ const sections: { id: ArtifactSection; label: string }[] = [
   { id: 'architecture', label: 'Architecture' },
   { id: 'journey', label: 'User journey' },
   { id: 'api-flow', label: 'Data flow' },
-  { id: 'prioritization', label: 'Prioritisation' },
-  { id: 'roadmap', label: 'Roadmap' },
+  { id: 'prioritization', label: 'RICE + impact matrix' },
+  { id: 'roadmap', label: 'Now / Next / Later' },
   { id: 'ab-tests', label: 'A/B tests' },
   { id: 'tradeoffs', label: 'Tradeoffs' },
   { id: 'risks', label: 'Risks & assumptions' },
@@ -33,7 +33,7 @@ export function PmArtifacts() {
       <SectionHeader
         eyebrow="PM artifacts"
         title="How I think about the product"
-        subtitle="Fictional GridPulse energy IoT product — architecture, prioritisation, roadmap, and tradeoffs I'd bring to a hiring conversation."
+        subtitle="Fictional composite artifacts showing transparent prioritization, option framing, and delivery sequencing."
       />
 
       <nav className="mb-6 flex flex-wrap gap-2">
@@ -137,7 +137,7 @@ export function PmArtifacts() {
                   <th>Feature</th>
                   <th>Impact</th>
                   <th>Effort</th>
-                  <th>Rationale</th>
+                  <th>RICE rationale</th>
                 </tr>
               </thead>
               <tbody>

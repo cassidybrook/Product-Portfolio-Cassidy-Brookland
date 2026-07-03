@@ -9,12 +9,17 @@ const tabs: { id: PrimaryTab; label: string; description: string }[] = [
   {
     id: 'profile',
     label: 'Profile',
-    description: 'Who I am & how I work',
+    description: 'Real CV, roles, and education',
   },
   {
     id: 'demo',
     label: 'Product Demo',
-    description: 'Interactive PM work sample',
+    description: 'Synthetic work sample only',
+  },
+  {
+    id: 'stay-current',
+    label: 'How I Stay Current',
+    description: 'Staying sharp across AI, IoT, energy, and product.',
   },
 ];
 

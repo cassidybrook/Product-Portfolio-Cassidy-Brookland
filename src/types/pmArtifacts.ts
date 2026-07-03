@@ -8,8 +8,6 @@ export interface KpiInsight {
   pmDecision: string;
 }
 
-export type DemoSectionTab = 'dashboard' | 'stakeholders' | 'artifacts';
-
 export interface PrioritizationItem {
   name: string;
   impact: 'high' | 'medium' | 'low';

@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import { kpiInsights } from '../data/kpiInsights';
 import { KpiInsightPanel } from './KpiInsightPanel';
 import type { KpiInsight } from '../types/pmArtifacts';
 import { SectionHeader, SectionShell } from './ui/SectionShell';
 
-export function KpiDashboard() {
+interface KpiDashboardProps {
+  items: KpiInsight[];
+  title?: string;
+  subtitle?: string;
+}
+
+export function KpiDashboard({
+  items,
+  title = 'Click a KPI to see PM thinking',
+  subtitle = "Each metric opens a panel with why it matters, what I noticed, and what I would do next as product manager.",
+}: KpiDashboardProps) {
   const [selected, setSelected] = useState<KpiInsight | null>(null);
 
   return (
@@ -12,11 +21,11 @@ export function KpiDashboard() {
       <SectionShell>
         <SectionHeader
           eyebrow="Interactive dashboard"
-          title="Click a KPI to see PM thinking"
-          subtitle="Each metric opens a panel: why it matters, what I noticed in the data, and what decision I'd make as product manager."
+          title={title}
+          subtitle={subtitle}
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {kpiInsights.map((kpi) => (
+          {items.map((kpi) => (
             <button
               key={kpi.id}
               type="button"

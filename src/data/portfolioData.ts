@@ -8,80 +8,49 @@ export const portfolioProfile: PortfolioProfile = {
   linkedin: 'https://www.linkedin.com/in/cassidy-brookland-596bb1210/',
   resumeUrl: 'https://cassidybrook.github.io/Product-Portfolio-Cassidy-Brookland/resume.html',
   intro:
-    'I am a Product Manager who builds practical IoT products for energy and smart-building use cases. My focus is turning complex technical systems into clear product decisions, measurable outcomes, and stakeholder-ready experiences that teams can deliver with confidence.',
-  productFocus: [
-    'IoT product strategy & roadmap delivery',
-    'Energy monitoring & peak demand reduction',
-    'AI-enhanced product management workflows',
-  ],
+    'Product Manager with 3+ years delivering IoT products across agriculture, energy, and smart building sectors, spanning hardware, firmware, and cloud platforms.',
   summary:
-    'Technical Product Manager with 3+ years delivering IoT products across agriculture, energy, and smart building sectors — spanning hardware, firmware, and cloud. Grounded in 4 years of hands-on electrical industry experience, I translate stakeholder needs into commercially grounded roadmaps, collaborate directly with engineering teams, and use AI agents in Cursor to move faster without sacrificing accuracy.',
+    'Backed by 4 years of hands-on electrical industry experience, I bring technical depth that enables direct collaboration with engineering teams and translates stakeholder needs into commercially grounded product roadmaps.',
   site: {
     name: 'Cassidy Brookland',
-    tagline: 'Interview portfolio · AI Technical PM · Energy & IoT',
+    tagline: 'Technical PM · IoT, Energy, Smart Buildings',
     description:
-      'A demo of my work and how I work — built for hiring conversations. Start with Profile for my background in under a minute, then explore the Product Demo to see how I turn IoT data into decisions.',
+      'A portfolio focused on how I find options with stakeholders, communicate tradeoffs, and iterate after launch.',
   },
-  impactMetrics: [
-    {
-      value: '30+',
-      label: 'Sites deployed',
-      context: 'Multi-site smart energy rollouts managed end-to-end',
-    },
-    {
-      value: '20%',
-      label: 'Faster onboarding',
-      context: 'Reusable config and dashboard templates',
-    },
-    {
-      value: '3/mo',
-      label: 'Customer onboards',
-      context: 'Consistent deployment pipeline KPI',
-    },
-    {
-      value: '500/yr',
-      label: 'Device scale',
-      context: 'Commercial IoT monitoring pipeline delivered',
-    },
-  ],
-  featuredProjects: [
-    {
-      id: 'fp-dashboard',
-      title: 'Interactive KPI dashboard with a PM lens',
-      description:
-        'Four headline energy-IoT KPIs — click any of them to see why the metric matters, what I noticed in the data, and the decision I would make as PM.',
-      tags: ['Product thinking', 'Energy IoT', 'Data storytelling'],
-      demoAnchor: 'dashboard',
-    },
-    {
-      id: 'fp-stakeholders',
-      title: 'GridPulse stakeholder dashboard',
-      description:
-        'A fictional energy-IoT product demo that translates LoRaWAN telemetry into decision-ready views for Customer Success, Sales, Marketing, and Ops — no raw JSON in sight.',
-      tags: ['React', 'TypeScript', 'Built in Cursor'],
-      demoAnchor: 'stakeholders',
-    },
-    {
-      id: 'fp-artifacts',
-      title: 'PM artifacts pack',
-      description:
-        'Architecture diagram, user journey, API data flow, prioritisation matrix, quarterly roadmap, A/B test ideas, tradeoffs, and risks for the fictional GridPulse product.',
-      tags: ['Architecture', 'Roadmap', 'Prioritisation'],
-      demoAnchor: 'artifacts',
-    },
-  ],
+  featuredProject: {
+    id: 'fp-demo',
+    title: 'Interactive KPI demo: product judgment in context',
+    description:
+      'An interactive IoT and energy KPI walkthrough. Click any KPI to see what I noticed, why it matters, and the decision I would make next as PM.',
+    tags: ['Stakeholder-ready storytelling', 'Transparent tradeoffs', 'Post-launch iteration'],
+    demoAnchor: 'landing',
+  },
+  howIThink: {
+    title: 'How I Think',
+    principles: [
+      {
+        heading: 'Understanding the why before the what',
+        body: 'I do not start with a solution. I start with the question underneath the request, what problem is actually being solved, and for whom, because a technically correct feature built on the wrong why still fails the person using it.',
+      },
+      {
+        heading: 'I bring options, not answers',
+        body: 'When a decision affects multiple teams, I do not arrive with a recommendation already locked in. I lay out the real tradeoffs and involve the people who will live with the consequences in choosing between them, because a decision people helped shape is one they will actually support when it gets hard.',
+      },
+      {
+        heading: 'I ask questions that do not presuppose the answer',
+        body: 'Discovery is only useful if it can surprise you. I am careful not to ask leading questions that confirm what I already believe. The goal is finding out what is true, not finding evidence for what I want to be true.',
+      },
+      {
+        heading: 'I show my reasoning, not just my conclusion',
+        body: 'Tradeoffs are rarely clean. When I recommend a direction, I show what it costs, not just what it gains, because trust is built on people seeing the reasoning, not just trusting the output.',
+      },
+      {
+        heading: 'Shipped is the start of the next cycle, not the finish line',
+        body: 'Launch is a checkpoint, not an ending. The real signal comes after, what broke, what got used differently than expected, what the next iteration needs to fix. I build that feedback loop in from day one, not as an afterthought.',
+      },
+    ],
+  },
   skillGroups: [
-    {
-      category: 'AI & Agent Workflows',
-      items: [
-        'Cursor IDE',
-        'Persona Agent PRD Review',
-        'LLM Workflow Automation',
-        'Anthropic API',
-        'Human-in-the-Loop Verification',
-        'PRD & Acceptance Criteria Drafting',
-      ],
-    },
     {
       category: 'IoT & Cloud Platforms',
       items: [
@@ -90,6 +59,7 @@ export const portfolioProfile: PortfolioProfile = {
         'API Gateway',
         'CloudWatch',
         'MQTT',
+        'Zigbee',
         'LoRaWAN',
         'The Things Network',
         'ChirpStack',
@@ -97,42 +67,18 @@ export const portfolioProfile: PortfolioProfile = {
       ],
     },
     {
-      category: 'Networking & Hardware',
-      items: [
-        'ESP32',
-        'Raspberry Pi',
-        'LoRaWAN Gateways',
-        'Cellular Gateways',
-        'Smart Meters',
-        'Industrial Controllers',
-        'Building Automation',
-      ],
-    },
-    {
-      category: 'Programming & Data',
-      items: ['Python', 'C#', 'SQL', 'SQLite', 'DynamoDB', 'TypeScript'],
-    },
-    {
-      category: 'DevOps & Security',
-      items: [
-        'CI/CD Pipelines',
-        'AWS IAM',
-        'Cognito',
-        'Device Authentication',
-        'Certificate Management',
-      ],
+      category: 'AI & Automation',
+      items: ['Cursor', 'Claude AI', 'Anthropic API', 'LLM Workflow Automation'],
     },
     {
       category: 'Product Delivery',
-      items: [
-        'Agile / Scrum',
-        'Backlog Prioritisation',
-        'PRD Authoring',
-        'Field Trials & POCs',
-        'Cross-Functional Alignment',
-        'Customer Onboarding KPIs',
-      ],
+      items: ['Agile / Scrum', 'Backlog Prioritisation', 'PRD Authoring', 'Cross-functional delivery'],
     },
+  ],
+  foldedSkills: [
+    'Networking & hardware: Raspberry Pi, ESP32, Shelly devices, RAK Wireless LoRaWAN gateways, MikroTik routers and switches, 4G/LTE gateways.',
+    'Programming & data: Python, C#, SQL, SQLite, DynamoDB.',
+    'DevOps & security: CI/CD pipelines, AWS IAM, Cognito, device authentication, certificate management.',
   ],
   education: [
     {
@@ -140,7 +86,7 @@ export const portfolioProfile: PortfolioProfile = {
       qualification: 'Diplomas in Software Development (L6) & Information Systems (L5)',
       institution: 'Techtorium NZITT — Auckland',
       period: '2021 – 2023',
-      note: 'Equivalent to Years 1–2 of a Bachelor of IT · Consecutive A+ average',
+      note: 'Equivalent to Years 1–2 of a Bachelor of Information Technology · Consecutive A+ average',
     },
     {
       id: 'edu-2',
@@ -152,50 +98,54 @@ export const portfolioProfile: PortfolioProfile = {
   experience: [
     {
       id: 'exp-1',
-      role: 'Product & Delivery Manager',
-      period: '2026 – Present',
-      sector: 'Energy · Smart Building Programs',
+      role: 'Product & Delivery Manager | Eco Logical Energy Ltd',
+      period: 'March 2026 – Present',
+      sector: 'Energy & Smart Building Programs',
       highlights: [
-        'Introduced LoRaWAN capability for an energy monitoring partnership — mapped end-to-end data flow across devices, networks, and monitoring systems.',
-        'Led Agile delivery across a multi-site smart energy rollout, prioritising backlog from customer feedback.',
-        'Hit a KPI of 3 new customer onboards per month while reducing peak load demand to defer infrastructure upgrades.',
-        'Cut site onboarding time by 20% through reusable configuration and dashboard templates.',
+        'Introduced LoRaWAN capability for a Neura and Vector partnership, mapping end-to-end data flow across devices, networks, and energy monitoring systems.',
+        'Led Agile delivery as Scrum Master across a 30-school smart energy program, running daily standups, managing sprint planning, and prioritising backlog based on Ministry of Education customer feedback.',
+        'Managed deployment pipeline to consistently hit a KPI of 3 new customer onboards per month, delivering smart energy monitoring and control systems across 30 school sites and reducing peak load demand to eliminate transformer upgrades.',
+        'Coordinated end-to-end IoT deployment lifecycle per site — stakeholder onboarding, electrician coordination, hardware procurement, fault diagnosis, and network troubleshooting.',
+        'Reduced site onboarding time by 20% by designing an operational toolset with reusable configuration and dashboard templates, improving deployment scalability across the Eco Smart Energy platform.',
+        'Created product requirements documents to build dashboards and virtual metering single-line diagrams.',
       ],
     },
     {
       id: 'exp-2',
-      role: 'Technical Product Manager',
-      period: '2023 – 2026',
+      role: 'Technical Product Manager | IoTVentures',
+      period: 'June 2023 – March 2026',
       sector: 'IoT · Agriculture & Remote Monitoring',
       highlights: [
-        'Owned the full product roadmap from concept to commercial launch for a distributed IoT monitoring system.',
-        'Translated strategy into specs and user stories across hardware, firmware, and cloud — managing end-to-end integration backlog.',
-        'Ran POC iterations, acceptance testing, and field trials before scaling to a recurring revenue pipeline.',
-        'Built cloud connectivity infrastructure using AWS IoT Core, TTN, and ChirpStack.',
+        'Owned the full product roadmap from concept to commercial launch for an IoT grain silo monitoring system.',
+        'Translated high-level product strategy into technical specifications and user stories across hardware, firmware, and software, managing the backlog for end-to-end system integration.',
+        'Scoped and executed proof-of-concept iterations, acceptance testing, and field trials across hardware, firmware, and cloud software to validate features prior to scaling.',
+        'Secured a strategic exclusivity agreement to deploy 500 silos per year, scaling the product from pilot to a recurring revenue pipeline.',
+        'Built and configured IoT cloud infrastructure using AWS IoT Core, The Things Network, and ChirpStack to support distributed device connectivity across deployments.',
+        'Managed cross-functional alignment across engineering, data science, and commercial stakeholders, defining acceptance criteria and driving sprint delivery planning.',
+        'Validated product-market fit and system reliability through live technical demonstrations at industry field days and partner events.',
       ],
     },
     {
       id: 'exp-3',
-      role: 'Electrician',
-      period: '2018 – 2021',
+      role: 'Electrician Number One Electrical',
+      period: 'January 2018 – December 2021',
       sector: 'Electrical Trade · Automation',
       highlights: [
-        'Designed and commissioned smart building automation and IoT integrations.',
-        'Programmed alarms, industrial controllers, and automation systems on commercial and industrial projects.',
-        'Validated electrical plans and load calculations to wiring standards.',
+        'Designed and commissioned smart home automation and IoT systems, integrating connected devices with building management and control platforms.',
+        'Programmed and configured alarms, industrial controllers, modems, and automation systems integrated with building management and industrial networks.',
+        'Installed and commissioned electrical systems across commercial, industrial, and residential projects.',
+        'Designed and validated electrical plans, load calculations, and circuit layouts in compliance with NZ wiring standards and the Electrical Code of Practice.',
       ],
     },
   ],
   aiSummary: {
     headline: 'AI-enhanced product management, human-verified',
     bullets: [
-      'Cursor is my primary product environment — PRDs, prototypes (including this site), and stakeholder dashboards all start there.',
-      'Persona agents review every PRD as Engineering, CS, Ops, and Commercial stakeholders before humans see it — alignment gaps surface in hours, not mid-sprint.',
-      'AI handles the drafts — story breakdowns, release notes, test scenarios. I keep the judgment calls and priority decisions.',
-      'Guardrails over speed: every output is verified against a source of truth, and real stakeholders still sign off before build.',
+      'I use Cursor to draft discovery plans, PRDs, and test scenarios, then pressure-test them with stakeholder personas before review.',
+      'AI accelerates option generation and synthesis; prioritization and tradeoff calls stay human-owned.',
+      'Every draft is verified against source data and stakeholder feedback before it moves into delivery.',
+      'Post-launch feedback is fed back into the next cycle, not treated as an afterthought.',
     ],
-    toolchain: 'Cursor · Persona agents · Anthropic API · Human-in-the-loop verification',
+    toolchain: 'Cursor · Persona agents · Human-in-the-loop verification',
   },
-  builtWith:
-    'This site was designed and built in Cursor — the same environment I use for PRD drafting, persona agent review, and rapid stakeholder UI prototypes.',
 };

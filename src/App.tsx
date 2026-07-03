@@ -4,11 +4,12 @@ import type { DemoSectionTab, PrimaryTab } from './types/navigation';
 import { PrimaryNav } from './components/PrimaryNav';
 import { PortfolioView } from './components/PortfolioView';
 import { DemoView } from './components/DemoView';
+import { StayCurrentView } from './components/StayCurrentView';
 
 export default function App() {
   const [activePrimary, setActivePrimary] = useState<PrimaryTab>('profile');
-  const [demoSection, setDemoSection] = useState<DemoSectionTab>('dashboard');
-  const { site, email, linkedin } = portfolioProfile;
+  const [demoSection, setDemoSection] = useState<DemoSectionTab>('landing');
+  const { site, linkedin, resumeUrl } = portfolioProfile;
 
   const openDemoSection = (section: DemoSectionTab) => {
     setDemoSection(section);
@@ -33,13 +34,16 @@ export default function App() {
                 <span className="gradient-text">{site.name}</span>
               </h1>
               <p className="mt-2 text-base font-medium text-brand-300">{site.tagline}</p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">
-                {site.description}
-              </p>
             </div>
-            <div className="flex shrink-0 flex-col gap-2 sm:items-end">
-              <a href={`mailto:${email}`} className="link-subtle text-sm">
-                {email}
+            <div className="flex shrink-0 items-center gap-3">
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-brand-400 hover:to-brand-500"
+              >
+                Download CV
               </a>
               <a
                 href={linkedin}
@@ -47,7 +51,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#1b1e24] px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-brand-500/40 hover:bg-brand-500/10 hover:text-brand-200"
               >
-                LinkedIn →
+                LinkedIn
               </a>
             </div>
           </div>
@@ -60,8 +64,10 @@ export default function App() {
         <div className="tab-panel-enter mt-8 lg:mt-10" role="tabpanel" key={activePrimary}>
           {activePrimary === 'profile' ? (
             <PortfolioView onOpenDemoSection={openDemoSection} />
-          ) : (
+          ) : activePrimary === 'demo' ? (
             <DemoView section={demoSection} onSectionChange={setDemoSection} />
+          ) : (
+            <StayCurrentView />
           )}
         </div>
       </main>
@@ -69,7 +75,7 @@ export default function App() {
       <footer className="relative border-t border-white/10 py-8">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-xs text-slate-500">
-            Interview portfolio · Synthetic product demo · Built with Cursor
+            Profile tab: real CV history · Product Demo tab: synthetic work sample
           </p>
         </div>
       </footer>

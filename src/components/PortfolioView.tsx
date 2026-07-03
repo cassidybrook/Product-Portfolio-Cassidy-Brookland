@@ -9,14 +9,13 @@ interface PortfolioViewProps {
 export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
   const {
     intro,
-    productFocus,
-    impactMetrics,
-    featuredProjects,
+    featuredProject,
+    howIThink,
     skillGroups,
+    foldedSkills,
     education,
     experience,
     aiSummary,
-    builtWith,
     email,
     linkedin,
     resumeUrl,
@@ -25,84 +24,56 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
   return (
     <div className="space-y-8">
       <SectionShell variant="brand" padding="lg">
-        <p className="eyebrow mb-3">Hi, I&apos;m Cassidy</p>
+        <p className="eyebrow mb-3">Profile</p>
         <p className="max-w-3xl text-base leading-relaxed text-slate-200 sm:text-lg">{intro}</p>
-        <ul className="mt-5 flex flex-wrap gap-2">
-          {productFocus.map((focus) => (
-            <li key={focus} className="skill-pill">
-              {focus}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-6 flex flex-wrap items-center gap-3">
-          <a
-            href={resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:from-brand-400 hover:to-brand-500"
-          >
-            ↓ View CV
-          </a>
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1b1e24] px-5 py-2.5 text-sm font-medium text-slate-200 transition hover:border-brand-500/40 hover:bg-brand-500/10 hover:text-brand-200"
-          >
-            LinkedIn
-          </a>
-          <a href={`mailto:${email}`} className="link-subtle text-sm">
-            {email}
-          </a>
-        </div>
+        <button
+          type="button"
+          onClick={() => onOpenDemoSection('landing')}
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:from-brand-400 hover:to-brand-500"
+        >
+          Open interactive KPI demo →
+        </button>
       </SectionShell>
-
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {impactMetrics.map((metric, index) => (
-          <article
-            key={metric.label}
-            className="glass-panel-hover p-5"
-            style={{ animationDelay: `${index * 80}ms` }}
-          >
-            <p className="metric-value">
-              <span className="gradient-text-hero">{metric.value}</span>
-            </p>
-            <p className="mt-2 text-sm font-semibold text-brand-300">{metric.label}</p>
-            <p className="mt-1 text-xs leading-relaxed text-slate-500">{metric.context}</p>
-          </article>
-        ))}
-      </section>
 
       <SectionShell>
         <SectionHeader
-          eyebrow="Featured projects"
-          title="Work you can explore right now"
-          subtitle="Each project lives inside the Product Demo tab — click through to see the PM thinking, not just the output."
+          eyebrow="Proof point"
+          title={featuredProject.title}
+          subtitle="This is the fastest way to evaluate how I think: one interaction, one decision trail."
         />
-        <div className="grid gap-4 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <article key={project.id} className="insight-card flex flex-col p-5">
-              <h4 className="font-semibold text-slate-100">{project.title}</h4>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">
-                {project.description}
-              </p>
-              <ul className="mt-4 flex flex-wrap gap-1.5">
-                {project.tags.map((tag) => (
-                  <li
-                    key={tag}
-                    className="rounded-full bg-slate-800/80 px-2.5 py-0.5 text-[11px] font-medium text-slate-400"
-                  >
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-              <button
-                type="button"
-                onClick={() => onOpenDemoSection(project.demoAnchor)}
-                className="mt-4 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-brand-400 transition hover:text-brand-300"
+        <div className="insight-card flex flex-col p-5">
+          <p className="text-sm leading-relaxed text-slate-400">{featuredProject.description}</p>
+          <ul className="mt-4 flex flex-wrap gap-1.5">
+            {featuredProject.tags.map((tag) => (
+              <li
+                key={tag}
+                className="rounded-full bg-slate-800/80 px-2.5 py-0.5 text-[11px] font-medium text-slate-400"
               >
-                Open in Product Demo →
-              </button>
+                {tag}
+              </li>
+            ))}
+          </ul>
+          <button
+            type="button"
+            onClick={() => onOpenDemoSection(featuredProject.demoAnchor)}
+            className="mt-4 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-brand-400 transition hover:text-brand-300"
+          >
+            Jump to demo →
+          </button>
+        </div>
+      </SectionShell>
+
+      <SectionShell>
+        <SectionHeader
+          eyebrow="Approach"
+          title={howIThink.title}
+          subtitle="My decision-making principles in product work."
+        />
+        <div className="space-y-3">
+          {howIThink.principles.map((principle) => (
+            <article key={principle.heading} className="glass-panel-hover rounded-xl p-4 sm:p-5">
+              <h4 className="text-sm font-semibold text-brand-300">{principle.heading}</h4>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{principle.body}</p>
             </article>
           ))}
         </div>
@@ -112,7 +83,7 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
         <SectionHeader
           eyebrow="Career"
           title="Experience"
-          subtitle="Sector-focused roles — employer names omitted for discretion."
+          subtitle="Professional experience aligned to my CV."
         />
         <div className="relative space-y-0">
           {experience.map((entry, index) => (
@@ -151,7 +122,7 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
         <SectionHeader
           eyebrow="Capabilities"
           title="Technical skills"
-          subtitle="Hands-on depth across the IoT stack and AI-native PM workflows — not just roadmap slides."
+          subtitle="Three load-bearing capability groups for IoT and energy TPM roles."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
@@ -165,6 +136,11 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
                 ))}
               </ul>
             </article>
+          ))}
+        </div>
+        <div className="mt-4 space-y-2 rounded-xl border border-white/10 bg-[#1b1e24] p-4 text-sm text-slate-400">
+          {foldedSkills.map((line) => (
+            <p key={line}>{line}</p>
           ))}
         </div>
       </SectionShell>
@@ -195,7 +171,7 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
           title={aiSummary.headline}
           subtitle={aiSummary.toolchain}
         />
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="grid gap-3">
           {aiSummary.bullets.map((bullet) => (
             <li
               key={bullet}
@@ -210,9 +186,26 @@ export function PortfolioView({ onOpenDemoSection }: PortfolioViewProps) {
         </ul>
       </SectionShell>
 
-      <section className="relative overflow-hidden rounded-2xl border border-dashed border-brand-500/25 bg-gradient-to-r from-brand-900/30 via-[#1b1e24] to-brand-800/20 px-6 py-8 text-center">
-        <div className="orb left-1/2 top-0 h-32 w-64 -translate-x-1/2 bg-brand-500/10" />
-        <p className="relative text-sm leading-relaxed text-slate-400">{builtWith}</p>
+      <section className="flex flex-wrap items-center gap-3 rounded-2xl border border-dashed border-brand-500/25 bg-gradient-to-r from-brand-900/30 via-[#1b1e24] to-brand-800/20 px-6 py-6 text-sm text-slate-300">
+        <a
+          href={resumeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-600 px-4 py-2 text-xs font-semibold text-white transition hover:from-brand-400 hover:to-brand-500"
+        >
+          View CV
+        </a>
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#1b1e24] px-4 py-2 text-xs font-medium text-slate-200 transition hover:border-brand-500/40 hover:bg-brand-500/10 hover:text-brand-200"
+        >
+          LinkedIn
+        </a>
+        <a href={`mailto:${email}`} className="link-subtle text-xs">
+          {email}
+        </a>
       </section>
     </div>
   );

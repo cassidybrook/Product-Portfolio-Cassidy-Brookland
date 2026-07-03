@@ -4,15 +4,15 @@ export const dashboardData: DashboardData = {
   productName: 'GridPulse Energy Platform',
   lastUpdated: '2 Jul 2026, 09:42 UTC',
   portfolioSummary:
-    'LoRaWAN-connected smart energy monitoring across 30 commercial building sites — tracking peak load, device health, and deployment pipeline.',
+    'LoRaWAN-connected smart energy monitoring across 42 commercial building sites — tracking peak load, device health, and deployment pipeline.',
 
   customerSuccess: {
     headline: {
       label: 'Sites needing attention',
-      value: '3',
-      context: 'of 30 live sites have elevated peak load or connectivity issues',
+      value: '6',
+      context: 'of 42 live sites have elevated peak load or connectivity issues',
       trend: 'down',
-      trendLabel: 'Down from 5 last week',
+      trendLabel: 'Down from 8 last week',
       severity: 'warning',
     },
     insights: [
@@ -128,17 +128,17 @@ export const dashboardData: DashboardData = {
   sales: {
     headline: {
       label: 'Customer onboards this month',
-      value: '3 / 3',
-      context: 'Monthly KPI met — smart energy sites commissioned on schedule',
+      value: '4 / 5',
+      context: 'Near KPI target — onboarding pace improving month over month',
       trend: 'up',
       trendLabel: 'On target for Q3 pipeline',
       severity: 'success',
     },
     pipeline: [
-      { month: 'Apr', target: 3, completed: 2, inProgress: 1 },
-      { month: 'May', target: 3, completed: 3, inProgress: 0 },
-      { month: 'Jun', target: 3, completed: 3, inProgress: 1 },
-      { month: 'Jul', target: 3, completed: 3, inProgress: 2 },
+      { month: 'Apr', target: 4, completed: 3, inProgress: 1 },
+      { month: 'May', target: 5, completed: 4, inProgress: 1 },
+      { month: 'Jun', target: 5, completed: 4, inProgress: 2 },
+      { month: 'Jul', target: 5, completed: 4, inProgress: 2 },
     ],
     opportunities: [
       {
@@ -246,7 +246,7 @@ export const dashboardData: DashboardData = {
     insights: [
       {
         id: 'mk-1',
-        title: 'Case study ready: 30-site smart energy rollout',
+        title: 'Case study ready: 42-site smart energy rollout',
         summary:
           'Six months of data shows consistent peak reduction and faster onboarding — ideal for public-sector and energy-sector audiences.',
         severity: 'success',
@@ -275,8 +275,8 @@ export const dashboardData: DashboardData = {
       severity: 'success',
     },
     fleet: [
-      { label: 'Active gateways', value: 30, unit: 'sites', status: 'success' },
-      { label: 'Smart meters online', value: 312, unit: 'devices', status: 'success' },
+      { label: 'Active gateways', value: 42, unit: 'sites', status: 'success' },
+      { label: 'Smart meters online', value: 468, unit: 'devices', status: 'success' },
       { label: 'Open fault tickets', value: 7, unit: 'tickets', status: 'warning' },
       { label: 'Avg onboarding time', value: 12, unit: 'days', status: 'success' },
     ],
