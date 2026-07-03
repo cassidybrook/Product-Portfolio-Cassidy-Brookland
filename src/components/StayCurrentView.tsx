@@ -17,6 +17,10 @@ const sections = [
     title: 'Intentional practice',
     body: 'Following something is not the same as understanding it. I use intentional practice to make sure new concepts actually stick: explaining them in my own words, applying them to a real or invented scenario, and testing whether I can articulate the why clearly enough for someone else to follow. If I cannot explain it simply, I do not consider it learned yet.',
   },
+  {
+    title: 'AI in daily practice',
+    body: 'Staying current with AI is not just reading about it, it is using it well. Cursor and Claude are part of my daily workflow: drafting discovery plans, PRDs, and test scenarios, then pressure-testing them against stakeholder personas before anything moves to review. AI speeds up option generation and synthesis, but prioritization and tradeoff calls stay mine.',
+  },
 ];
 
 export function StayCurrentView() {
