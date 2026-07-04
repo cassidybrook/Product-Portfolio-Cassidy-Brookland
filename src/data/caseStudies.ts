@@ -12,8 +12,8 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'silosense',
-    name: 'SiloSense (fictional composite)',
+    id: 'pastureiq',
+    name: 'PastureIQ (fictional composite)',
     context:
       'Remote grain monitoring across distributed rural sites using low-power, long-range telemetry for temperature, moisture, and fill level.',
     scenario:
@@ -29,8 +29,8 @@ export const caseStudies: CaseStudy[] = [
     frameworks: ['CIRCLES', 'RICE', 'Effort vs impact'],
   },
   {
-    id: 'gridpulse',
-    name: 'GridPulse (fictional composite)',
+    id: 'wattwallet',
+    name: 'WattWallet (fictional composite)',
     context:
       'Multi-site smart-building energy monitoring focused on peak demand reduction with decision-ready views for Customer Success, Sales, Ops, and Marketing.',
     scenario:

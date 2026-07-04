@@ -21,6 +21,10 @@ const sections = [
     title: 'AI in daily practice',
     body: 'Staying current with AI is not just reading about it, it is using it well. Cursor and Claude are part of my daily workflow: drafting discovery plans, PRDs, and test scenarios, then pressure-testing them against stakeholder personas before anything moves to review. AI speeds up option generation and synthesis, but prioritization and tradeoff calls stay mine.',
   },
+  {
+    title: 'Guardrails before autonomy',
+    body: "I use AI to remove grunt work and extend pattern detection at scale, synthesizing interview transcripts, stress testing scoring assumptions, drafting audience specific communications, and catching anomalies in reconciliation data faster than a manual pass would. I keep it out of decisions with real world safety or financial consequences without a human in the loop. On WattWallet, for example, no agent is ever authorized to independently cut off or restore someone's power, no matter how confident its recommendation. Knowing where to draw that line is as much a product skill as knowing where to apply the automation in the first place.",
+  },
 ];
 
 export function StayCurrentView() {

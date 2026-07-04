@@ -24,7 +24,7 @@ export interface FeaturedProject {
   title: string;
   description: string;
   tags: string[];
-  demoAnchor: 'landing' | 'silosense' | 'gridpulse';
+  demoAnchor: 'landing' | 'pastureiq' | 'wattwallet' | 'harvestlink';
 }
 
 export interface PortfolioProfile {

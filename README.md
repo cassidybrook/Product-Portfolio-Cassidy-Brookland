@@ -21,7 +21,7 @@ Background understood in under a minute:
 
 ### Tab 2 — Product Demo
 
-A fictional **GridPulse** energy-IoT product built entirely on synthetic data, split into three sections:
+A fictional **WattWallet** energy and payments product built entirely on synthetic data, split into three sections:
 
 | Section | What it shows |
 |---------|---------------|
@@ -78,7 +78,7 @@ After deployment, your site will be available at:
 src/
 ├── components/     # UI components (nav, KPI dashboard, PM artifacts, charts, tables)
 │   └── ui/         # Shared shell/header helpers
-├── data/           # Profile data + synthetic GridPulse demo data
+├── data/           # Profile data + synthetic WattWallet demo data
 ├── types/          # TypeScript interfaces
 └── App.tsx         # App shell with Profile | Product Demo tabs
 ```

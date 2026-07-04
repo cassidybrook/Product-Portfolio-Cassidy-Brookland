@@ -60,7 +60,7 @@ export interface OutcomeMetric {
 }
 
 export interface ProductDemoCase {
-  id: 'silosense' | 'gridpulse';
+  id: 'pastureiq' | 'wattwallet' | 'harvestlink';
   label: string;
   shortDescription: string;
   syntheticDisclosure: string;
@@ -103,16 +103,16 @@ export const demoSectionOrder: { id: DemoDetailSectionId; label: string }[] = [
   { id: 'outcomes', label: 'Outcomes' },
 ];
 
-export const productDemos: Record<'silosense' | 'gridpulse', ProductDemoCase> = {
-  silosense: {
-    id: 'silosense',
-    label: 'AgriTech: SiloSense',
+export const productDemos: Record<'pastureiq' | 'wattwallet' | 'harvestlink', ProductDemoCase> = {
+  pastureiq: {
+    id: 'pastureiq',
+    label: 'AgriTech: PastureIQ',
     shortDescription:
-      'Remote grain monitoring for growers and grain buyers across distributed sites with low power telemetry.',
+      'Wearable livestock monitoring engineered to stay connected in dead zones, with mesh relay, priority alerting, and scoped AI agents.',
     syntheticDisclosure:
       'All names, metrics, and scenarios in this tab are invented for demonstration.',
     problemFraming:
-      'I framed SiloSense around one practical issue. Growers were losing confidence in remote alerts because false spoilage warnings created avoidable site checks. Grain buyers also lacked a trusted shared view of temperature, moisture, and fill level, so decisions were delayed and often reactive during high risk weather periods.',
+      'I framed PastureIQ around one practical issue. Farmers were losing confidence in health alerts because dead zones delayed updates. That made intervention timing unreliable and reduced trust in the platform during high risk periods.',
     discovery: {
       approach:
         'I used non-leading interviews with growers, grain buyers, and field technicians. I asked for recent decision moments, then mapped what signals they trusted or ignored before discussing feature ideas.',
@@ -280,15 +280,15 @@ export const productDemos: Record<'silosense' | 'gridpulse', ProductDemoCase> = 
       },
     ],
   },
-  gridpulse: {
-    id: 'gridpulse',
-    label: 'Smart Energy: GridPulse',
+  wattwallet: {
+    id: 'wattwallet',
+    label: 'Smart Energy: WattWallet',
     shortDescription:
-      'Smart building energy monitoring focused on peak demand reduction and operational clarity across customer facing teams.',
+      'Prepay energy payments engineered to work offline, with edge computing, tamper resistant design, and scoped AI agents.',
     syntheticDisclosure:
       'All names, metrics, and scenarios in this tab are invented for demonstration.',
     problemFraming:
-      'I framed GridPulse around one recurring issue. Teams had energy telemetry, but each function interpreted it differently, which led to inconsistent decisions. Customer Success needed clear intervention priorities, Ops needed reliable alerting, and Sales needed outcome stories without exposing raw telemetry noise.',
+      'I framed WattWallet around one recurring issue. Teams had payment and meter telemetry, but each function interpreted it differently, which led to inconsistent decisions. Customer Success needed clear intervention priorities, Ops needed reliable alerting, and Sales needed outcome stories without exposing raw telemetry noise.',
     discovery: {
       approach:
         'I ran interviews and workflow shadowing with Customer Success managers, Ops coordinators, and Sales leads. I focused on decision handoffs and where data translation failed.',
@@ -512,6 +512,219 @@ export const productDemos: Record<'silosense' | 'gridpulse', ProductDemoCase> = 
         before: '3 of 5',
         after: '4 of 5',
         note: 'Readiness checks reduced avoidable delays',
+      },
+    ],
+  },
+  harvestlink: {
+    id: 'harvestlink',
+    label: 'Marketplace: HarvestLink',
+    shortDescription:
+      'A two sided marketplace connecting small farms directly with local restaurants and grocers, built on trust, logistics, and a payment guarantee rather than new hardware.',
+    syntheticDisclosure:
+      'All names, metrics, and scenarios in this tab are invented for demonstration.',
+    problemFraming:
+      'I framed HarvestLink as a trust and operations problem first, not a listing problem. Farms had surplus but sold through distributors for payment certainty, while buyers wanted local supply but avoided the coordination burden of dealing with many farms.',
+    discovery: {
+      approach:
+        'I interviewed farmers, independent grocers, and restaurant buyers, then reviewed distributor economics and support notes to separate price concerns from trust and logistics constraints.',
+      questions: [
+        { question: 'What keeps you selling to a distributor even when margin is lower?' },
+        { question: 'What would make direct farm sourcing feel operationally safe for your team?' },
+        { question: 'Where does your current produce process break under time pressure?' },
+      ],
+      learningShift:
+        'My initial assumption was price sensitivity. Discovery showed trust, quality consistency, and logistics reliability were the dominant blockers.',
+    },
+    userStories: [
+      {
+        role: 'Farmer',
+        goal: 'receive guaranteed payment timing',
+        outcome: 'I can sell direct without taking new cash flow risk',
+      },
+      {
+        role: 'Restaurant buyer',
+        goal: 'place recurring orders through one point of contact',
+        outcome: 'I can source local produce without adding coordination overhead',
+      },
+      {
+        role: 'Grocer buyer',
+        goal: 'trust quality consistency across multiple farms',
+        outcome: 'I can keep shelf standards stable while buying direct',
+      },
+      {
+        role: 'Marketplace operations lead',
+        goal: 'manage substitutions and shortfalls with clear communication',
+        outcome: 'I can protect trust when supply shifts mid cycle',
+      },
+    ],
+    prioritization: {
+      roadmap: [
+        {
+          lane: 'Now',
+          items: [
+            {
+              name: 'Managed marketplace launch in one region',
+              reasoning: 'Prove trust and liquidity with concierge operations first',
+            },
+            {
+              name: 'Quality rubric and payment guarantee',
+              reasoning: 'Directly addresses discovery barriers on both sides',
+            },
+            {
+              name: 'Pooled logistics partner routing',
+              reasoning: 'Removes farm by farm delivery complexity for buyers',
+            },
+          ],
+        },
+        {
+          lane: 'Next',
+          items: [
+            {
+              name: 'Restaurant subscription ordering',
+              reasoning: 'Moves channel from occasional use to default weekly flow',
+            },
+            {
+              name: 'Buyer trust scorecard visibility',
+              reasoning: 'Makes consistency signals explicit across harvest cycles',
+            },
+            {
+              name: 'Farmer planning dashboard',
+              reasoning: 'Improves supply reliability and reduces last minute substitutions',
+            },
+          ],
+        },
+        {
+          lane: 'Later',
+          items: [
+            {
+              name: 'Category expansion to dairy and specialty goods',
+              reasoning: 'Reuses trust and logistics infrastructure once produce is stable',
+            },
+            {
+              name: 'Regional infrastructure licensing',
+              reasoning: 'Extends moat through platformized trust and logistics model',
+            },
+            {
+              name: 'Second region launch',
+              reasoning: 'Sequence after repeat rate and unit economics prove durability',
+            },
+          ],
+        },
+      ],
+      effortImpact: [
+        { name: 'Managed marketplace launch in one region', quadrant: 'quick-wins' },
+        { name: 'Quality rubric and payment guarantee', quadrant: 'strategic-bets' },
+        { name: 'Restaurant subscription ordering', quadrant: 'strategic-bets' },
+        { name: 'Regional infrastructure licensing', quadrant: 'defer' },
+      ],
+    },
+    architecture: {
+      summary:
+        'The operating model centered on trust and fulfillment mechanics, with one intake standard, one payment commitment model, and one logistics path for buyers.',
+      steps: [
+        {
+          from: 'Farm supply intake',
+          to: 'Quality standards review',
+          protocol: 'Operational rubric',
+          note: 'Consistent grading before listings are visible to buyers',
+        },
+        {
+          from: 'Buyer order placement',
+          to: 'Marketplace guarantee process',
+          protocol: 'Commercial workflow',
+          note: 'Payment to farms guaranteed within agreed settlement window',
+        },
+        {
+          from: 'Confirmed orders',
+          to: 'Pooled logistics partner',
+          protocol: 'Route coordination',
+          note: 'Single distribution pass replaces fragmented farm level deliveries',
+        },
+        {
+          from: 'Delivery completion',
+          to: 'Settlement and repeat cycle',
+          protocol: 'Reconciliation workflow',
+          note: 'Trust loop closes through quality outcomes and payment reliability',
+        },
+      ],
+    },
+    decisionMoment: {
+      conflict:
+        'Team pressure favored a lightweight listing model for speed, while discovery showed trust and logistics were the actual adoption blockers.',
+      participants: ['Farm account lead', 'Buyer operations manager', 'Finance lead', 'Marketplace GM'],
+      options: [
+        {
+          option: 'Option A: listing site only',
+          benefits: 'Faster launch with lower immediate operating cost',
+          cost: 'Leaves trust and logistics friction unresolved, likely low repeat behavior',
+        },
+        {
+          option: 'Option B: managed marketplace with guarantee and pooled logistics',
+          benefits: 'Directly removes discovery barriers for both sides',
+          cost: 'Higher working capital and operations complexity in phase one',
+        },
+      ],
+      chosen:
+        'I chose the managed marketplace path because it addressed the real blockers surfaced in discovery and created stronger long term switching costs.',
+    },
+    kpis: [
+      {
+        id: 'harvest-liquidity',
+        label: 'Marketplace liquidity',
+        value: '78%',
+        trend: 'Up from 52% in eight weeks',
+        whyItMatters:
+          'Liquidity shows whether listed produce actually converts to transactions rather than remaining theoretical supply.',
+        insightNoticed:
+          'Liquidity rose fastest where quality intake compliance stayed tight.',
+        pmDecision:
+          'Protect intake standards even when supply pressure increases.',
+      },
+      {
+        id: 'harvest-repeat-rate',
+        label: 'Buyer repeat purchase rate',
+        value: '64%',
+        trend: 'Up from 37%',
+        whyItMatters:
+          'Repeat behavior is the clearest signal that HarvestLink becomes default channel, not a one off trial.',
+        insightNoticed:
+          'Repeat dropped in weeks with high substitution variance.',
+        pmDecision:
+          'Tighten substitution communication and buyer consent thresholds.',
+      },
+      {
+        id: 'harvest-farmer-retention',
+        label: 'Farmer retention after first cycle',
+        value: '86%',
+        trend: 'Up from 69%',
+        whyItMatters:
+          'Retention after first payment cycle indicates trust in payout reliability and process clarity.',
+        insightNoticed:
+          'Retention was strongest where payment timeline messaging was explicit at onboarding.',
+        pmDecision:
+          'Standardize payment timeline briefing and dashboard confirmation at sign up.',
+      },
+    ],
+    postLaunchIteration:
+      'After pilot stabilization I monitored liquidity and repeat trends across a full season. I saw repeat soften whenever quality thresholds loosened to chase short term supply. I adjusted policy to protect trust metrics first, then moved subscription ordering ahead of second region expansion.',
+    outcomes: [
+      {
+        label: 'Liquidity',
+        before: '52%',
+        after: '78%',
+        note: 'Listings converted to fulfilled orders at materially higher rate',
+      },
+      {
+        label: 'Buyer repeat purchase rate',
+        before: '37%',
+        after: '64%',
+        note: 'Marketplace behavior shifted from trial to habitual use',
+      },
+      {
+        label: 'Farmer retention after first cycle',
+        before: '69%',
+        after: '86%',
+        note: 'Payment guarantee and operational clarity reduced early churn',
       },
     ],
   },

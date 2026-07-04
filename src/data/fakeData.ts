@@ -1,7 +1,7 @@
 import type { DashboardData } from '../types';
 
 export const dashboardData: DashboardData = {
-  productName: 'GridPulse Energy Platform',
+  productName: 'WattWallet Synthetic Platform',
   lastUpdated: '2 Jul 2026, 09:42 UTC',
   portfolioSummary:
     'LoRaWAN-connected smart energy monitoring across 42 commercial building sites — tracking peak load, device health, and deployment pipeline.',
