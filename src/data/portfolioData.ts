@@ -8,7 +8,7 @@ export const portfolioProfile: PortfolioProfile = {
   linkedin: 'https://www.linkedin.com/in/cassidy-brookland-596bb1210/',
   resumeUrl: 'https://cassidybrook.github.io/Product-Portfolio-Cassidy-Brookland/resume.html',
   intro:
-    'Product Manager with 3+ years delivering IoT products across agriculture, energy, and smart building sectors, spanning hardware, firmware, and cloud platforms.',
+    'Product Manager with 3+ years delivering IoT products across agriculture, energy, and smart building sectors, spanning hardware, firmware, and cloud platforms, with a track record of closing commercial partnerships and driving go to market strategy alongside technical execution.',
   summary:
     'Backed by 4 years of hands-on electrical industry experience, I bring technical depth that enables direct collaboration with engineering teams and translates stakeholder needs into commercially grounded product roadmaps.',
   site: {
