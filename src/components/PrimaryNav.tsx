@@ -17,6 +17,11 @@ const tabs: { id: PrimaryTab; label: string; description: string }[] = [
     description: 'Synthetic work sample only',
   },
   {
+    id: 'iot-architecture',
+    label: 'How I Architect IoT Systems',
+    description: 'Connectivity patterns and decision framework',
+  },
+  {
     id: 'stay-current',
     label: 'How I Stay Current',
     description: 'Staying sharp across AI, IoT, energy, and product.',

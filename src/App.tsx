@@ -4,6 +4,7 @@ import type { DemoSectionTab, PrimaryTab } from './types/navigation';
 import { PrimaryNav } from './components/PrimaryNav';
 import { PortfolioView } from './components/PortfolioView';
 import { DemoView } from './components/DemoView';
+import { IotArchitectureView } from './components/IotArchitectureView';
 import { StayCurrentView } from './components/StayCurrentView';
 
 export default function App() {
@@ -66,6 +67,8 @@ export default function App() {
             <PortfolioView onOpenDemoSection={openDemoSection} />
           ) : activePrimary === 'demo' ? (
             <DemoView section={demoSection} onSectionChange={setDemoSection} />
+          ) : activePrimary === 'iot-architecture' ? (
+            <IotArchitectureView />
           ) : (
             <StayCurrentView />
           )}
