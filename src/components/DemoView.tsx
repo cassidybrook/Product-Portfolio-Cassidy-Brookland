@@ -18,7 +18,7 @@ export function DemoView({ section, onSectionChange }: DemoViewProps) {
       <SectionShell variant="brand" padding="lg">
         <SectionHeader
           eyebrow="Product demo"
-          title="Two synthetic end to end product demos"
+          title="Three synthetic end to end product demos"
           subtitle="Choose one complete flow and review discovery through post launch iteration. All names, metrics, and scenarios in this tab are invented for demonstration."
         />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
