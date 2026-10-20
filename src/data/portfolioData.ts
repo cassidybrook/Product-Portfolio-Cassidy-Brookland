@@ -5,7 +5,7 @@ export const portfolioProfile: PortfolioProfile = {
   title: 'Product Manager · IoT & Energy · AI-Enhanced Product Leadership',
   location: 'Toronto, Canada',
   email: 'cassidybrookland2@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/cassidybrookland',
+  linkedin: 'https://www.linkedin.com/in/cassidy-brookland-596bb1210/',
   resumeUrl: 'https://cassidybrook.github.io/Product-Portfolio-Cassidy-Brookland/resume.html',
   intro:
     "I'm a product and delivery manager with 3+ years in IoT, across agritech and smart energy. Before that I worked as an electrician for 4 years, so I'm comfortable on site and working with engineers. I took a grain silo monitoring product from prototype to commercial launch, secured an exclusivity agreement for 500 silos a year, and now manage a smart energy rollout for schools. I've also done sales along the way, from selling GrainSure to managing clients from first contact through onboarding. I've recently moved to Toronto and I'm looking for product, project and sales roles in IoT, energy, software or connected hardware.",
