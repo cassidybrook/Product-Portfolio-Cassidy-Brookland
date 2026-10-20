@@ -8,12 +8,12 @@ export const portfolioProfile: PortfolioProfile = {
   linkedin: 'https://www.linkedin.com/in/cassidybrookland',
   resumeUrl: 'https://cassidybrook.github.io/Product-Portfolio-Cassidy-Brookland/resume.html',
   intro:
-    "I'm a product and delivery manager with about 3 years in IoT, across agritech and smart energy. Before that I worked as an electrician for 4 years, so I'm comfortable on site and working with engineers. I took a grain silo monitoring product from prototype to commercial launch, secured an exclusivity agreement for 500 silos a year, and now manage a smart energy rollout for schools. I've also done sales along the way, from selling GrainSure to managing clients from first contact through onboarding. I've recently moved to Toronto and I'm looking for product, project and sales roles in IoT, energy and connected hardware.",
+    "I'm a product and delivery manager with 3+ years in IoT, across agritech and smart energy. Before that I worked as an electrician for 4 years, so I'm comfortable on site and working with engineers. I took a grain silo monitoring product from prototype to commercial launch, secured an exclusivity agreement for 500 silos a year, and now manage a smart energy rollout for schools. I've also done sales along the way, from selling GrainSure to managing clients from first contact through onboarding. I've recently moved to Toronto and I'm looking for product, project and sales roles in IoT, energy, software or connected hardware.",
   summary:
     'My electrical background means I can work directly with engineers and installers, and turn what customers need into a clear plan.',
   site: {
     name: 'Cassidy Brookland',
-    tagline: 'Technical PM · IoT, Energy, Smart Buildings',
+    tagline: 'PM · IoT, Software',
     description:
       'A portfolio focused on how I find options with stakeholders, communicate tradeoffs, and iterate after launch.',
   },
