@@ -10,7 +10,7 @@ import { StayCurrentView } from './components/StayCurrentView';
 export default function App() {
   const [activePrimary, setActivePrimary] = useState<PrimaryTab>('profile');
   const [demoSection, setDemoSection] = useState<DemoSectionTab>('landing');
-  const { site, linkedin, resumeUrl } = portfolioProfile;
+  const { site, linkedin, resumeUrl, email } = portfolioProfile;
 
   const openDemoSection = (section: DemoSectionTab) => {
     setDemoSection(section);
@@ -34,9 +34,12 @@ export default function App() {
               <h1 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
                 <span className="gradient-text">{site.name}</span>
               </h1>
-              <p className="mt-2 text-base font-medium text-brand-300">
+              <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-base font-medium text-brand-300">
                 <a href="tel:+4168206916" className="hover:text-brand-200">
                   +4168206916
+                </a>
+                <a href={`mailto:${email}`} className="hover:text-brand-200">
+                  {email}
                 </a>
               </p>
             </div>
